@@ -1,7 +1,7 @@
 ﻿namespace ar.codes.bubble_sort
 {
     /// <summary>
-    /// this is a demonstration implementation of "bubble sort" alhoritm
+    /// this is a demonstration implementation of "bubble sort" algorithm
     /// </summary>
     public class BubbleSort
     {
