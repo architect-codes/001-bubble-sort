@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bubble-sort", "bubble-sort\bubble-sort.csproj", "{CC28648A-9D87-4169-8AF8-E3EDF0135A53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "common-algos", "common-algos\common-algos.csproj", "{CC28648A-9D87-4169-8AF8-E3EDF0135A53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bubble-sort.test", "bubble-sort.test\bubble-sort.test.csproj", "{16B7BF77-AAD1-4667-8EEB-2C1BF79C43E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "common-algos.test", "common-algos.test\common-algos.test.csproj", "{16B7BF77-AAD1-4667-8EEB-2C1BF79C43E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
