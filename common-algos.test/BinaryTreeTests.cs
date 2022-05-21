@@ -24,7 +24,6 @@ namespace ar.codes.bubble_sort.test
             bt.Root!.Right!.Value.ShouldBe(6);
 
             bt.Root!.Left!.Left!.Value.ShouldBe(1);
-
         }
     }
 }

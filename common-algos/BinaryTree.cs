@@ -64,5 +64,14 @@ namespace ar.codes.common_algos
                 else
                     Right.Add(newValue);
         }
+
+        /// <summary>
+        /// Traverses a tree via depth-first algoritm and invokes action passed
+        /// </summary>
+        /// <param name="action"></param>
+        public void TraverseDepth(Action<Node<T>> action)
+        {
+            
+        }
     }
 }
