@@ -11,23 +11,35 @@ namespace ar.codes.common_algos
     /// </summary>
     public class BinaryTree<T> where T : notnull, IComparable<T>
     {
-        public Node<T> Root { get; set; }
+        public Node<T>? Root { get; set; }
 
         public BinaryTree()
         {
-            Root = new Node<T>();
+
         }
 
-        public void AddValue(T value)
+        /// <summary>
+        /// adds new node
+        /// </summary>
+        /// <param name="value">value of a node</param>
+        public void AddNode(T value)
         {
-            
+            // check if our tree is not initialized yet
+            if (Root is null)
+            {
+                // let's create a root node, assign value to it and this is it
+                Root = new Node<T>() { Value = value };
+                return;
+            }
+
+            // ok, start traversing 
+            Root.Add(value);
         }
 
         public Node<T> FindValue(T value)
         {
             return new Node<T>();
         }
-
     }
 
     public class Node<T> where T : notnull, IComparable<T>
@@ -36,5 +48,21 @@ namespace ar.codes.common_algos
 
         public Node<T>? Left { get; set; }
         public Node<T>? Right { get; set; }
+
+        public void Add(T newValue)
+        {
+            // determine if newValue should go left or right
+            if (newValue.CompareTo(Value) < 0)
+                if (Left is null)
+                    Left = new Node<T>() { Value = newValue };
+                else
+                    Left.Add(newValue);
+
+            if (newValue.CompareTo(Value) > 0)
+                if (Right is null)
+                    Right = new Node<T>() { Value = newValue };
+                else
+                    Right.Add(newValue);
+        }
     }
 }
