@@ -52,17 +52,21 @@ namespace ar.codes.common_algos
         public void Add(T newValue)
         {
             // determine if newValue should go left or right
-            if (newValue.CompareTo(Value) < 0)
-                if (Left is null)
-                    Left = new Node<T>() { Value = newValue };
-                else
-                    Left.Add(newValue);
+            if(newValue.CompareTo(Value) < 0)
+                Left = AssureExists(Left, newValue);
 
             if (newValue.CompareTo(Value) > 0)
-                if (Right is null)
-                    Right = new Node<T>() { Value = newValue };
+                Right = AssureExists(Right, newValue);
+
+            static Node<T> AssureExists(Node<T>? node, T newValue)
+            {
+                if(node is null)
+                    node = new Node<T>() { Value = newValue };
                 else
-                    Right.Add(newValue);
+                    node.Add(newValue);
+
+                return node;
+            }
         }
 
         /// <summary>
