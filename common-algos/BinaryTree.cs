@@ -36,9 +36,9 @@ namespace ar.codes.common_algos
             Root.Add(value);
         }
 
-        public Node<T> FindValue(T value)
+        public void Traverse(Action<Node<T>> action)
         {
-            return new Node<T>();
+            Root?.TraverseDepth(action);
         }
     }
 
@@ -75,7 +75,10 @@ namespace ar.codes.common_algos
         /// <param name="action"></param>
         public void TraverseDepth(Action<Node<T>> action)
         {
-            
+            action?.Invoke(this);
+
+            Left?.TraverseDepth(action!);
+            Right?.TraverseDepth(action!);
         }
     }
 }
