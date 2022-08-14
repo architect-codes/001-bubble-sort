@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ar.codes.common_algos
 {
-    public class StringReversalRecursion
+    public class StringIsPolu
     {
         /// <summary>
         /// reverses string using recursion
@@ -15,7 +15,20 @@ namespace ar.codes.common_algos
         /// <returns></returns>
         public static string Reverse(string input)
         {
-            return string.Empty;
+            return ReverseInternal(input, 0);
+        }
+
+        public static string ReverseInternal(string input, int offset)
+        {
+
+
+            if(string.IsNullOrEmpty(input))
+                return string.Empty;
+
+            if (input.Length==1)
+                return input;
+
+
         }
     }
 }

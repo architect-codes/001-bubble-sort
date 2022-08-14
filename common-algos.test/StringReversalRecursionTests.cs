@@ -12,7 +12,7 @@ namespace ar.codes.bubble_sort.test
         [TestMethod]
         public void BasicTest()
         {
-            var result = StringReversalRecursion.Reverse("ABCDE");
+            var result = StringIsPolu.Reverse("ABCDE");
 
             result.ShouldBe("EDCBA");
         }
